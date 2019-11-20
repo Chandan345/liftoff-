@@ -1,0 +1,13 @@
+
+<div *ngIf="dashboardDetails" class="dashboard">
+  <h4>{{dashboardDetails.title}}</h4>
+  <ul>
+    <li *ngFor="let list of selectionList" style="padding: 10px;">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="{{list.id}}" value="{{list.id}}">
+            <label class="custom-control-label" for="{{list.id}}">{{list.label}}</label>
+        </div>
+      </li>
+  </ul>
+  <div><button class="btn btn-success float-right">Save</button></div>
+</div>
